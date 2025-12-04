@@ -1,59 +1,80 @@
-# Data Centric Programming Assignment 2025
+# Assignment 1: Tunes Database Analysis and GUI
 
 - [Assignment Brief](assignment.md)
 
-Name: Jack Shanahan
+---
 
-Student Number: C24775089
+## Information
 
-# Screenshots
- 
-![Pie Chart Screenshot](types_pie.png)  
-![Bar Chart Screenshot](origins_bar.png)  
+- **Module:** Data Centric Programming DATA2005  
+- **Course:** TU850/2 – Data Science & AI  
+- **Lecturer:** Bryan Duggan  
+- **Name:** Jack Shanahan  
+- **Student Number:** C24775089
 
-# Description of the project
+---
 
-This project is a Python application that parses ABC music notation files, stores the tunes in a MySQL database, and provides a user interface for querying and analyzing the data. The program reads multiple ABC files from folders representing different books, decodes special characters, inserts the data into a table called `tunes1`, and allows the user to explore the tunes through a Tkinter-based GUI. Additional features include pie charts for tune types and bar charts for origin counts.
+## Description of the Project
 
-# Instructions for use
+This project processes ABC music notation files stored in folders and imports them into a MySQL database. It provides a GUI that allows searching, viewing, and analyzing the tunes, including charts for tune types and origins.
 
-1. Ensure MySQL is installed and running on your machine.
-2. Create a database named `tunes`.
-3. Place the `abc_books` folder in the same directory as `main.py`.
-4. Run `main.py` to automatically set up the table, parse the ABC files, and launch the GUI.
-5. Use the GUI buttons to:
-    - Show all tunes
-    - Search by title
-    - Search by book number
-    - View charts for tune types and origins
-6. Close the GUI when finished.
+---
 
-# How it works:
+## Instructions for Use
 
-- The program recursively scans the `abc_books` directory and reads all `.abc` files.
-- Each file is parsed line by line to extract tune metadata.
-- Special ABC encodings (like accents) are converted to Unicode.
-- Each tune is inserted into the `tunes1` table in the `tunes` database.
-- The Tkinter GUI allows users to query the database and view results in a table format.
-- Matplotlib generates charts to visualize tune types and origins.
+1. Place your ABC files inside the `abc_books` folder.  
+2. Ensure MySQL is running and a database named `tunes` exists.  
+3. Run `assignment_code.py` to set up the table, load files, and launch the GUI.  
+4. Use the menu buttons to view all tunes, search by title or book number, and see charts.  
 
-# List of files in the project
+---
 
-| Files | Source |
-|-----------|-----------|
-| assignment_code.py | Self written |
-| abc_books/ | Provided dataset |
-| images/ | Screenshots generated from running the application |
+## How It Works
 
-# References
-* [MySQL Connector for Python](https://dev.mysql.com/doc/connector-python/en/)
-* [Tkinter Documentation](https://docs.python.org/3/library/tkinter.html)
-* [Matplotlib Documentation](https://matplotlib.org/stable/contents.html)
+### Database Connection and Table Setup
 
-# What I am most proud of in the assignment
+The program connects to the MySQL database each time a function needs to access data. It creates the `tunes1` table if it does not exist, with columns matching the tune attributes.
 
-I am most proud of implementing a fully functional GUI that interacts with a MySQL database and allows the user to search, filter, and visualize the tune data. The encoding decoding system ensures all ABC special characters display correctly.
+### Processing ABC Files
 
-# What I learned
+The program includes a function to replace encoded characters in ABC files with Unicode equivalents. Files are parsed line by line to extract tunes, storing each tune in a dictionary. All tunes are then inserted into the database.
 
-I learned how to parse structured text files into Python dictionaries, interact with a MySQL database using Python, and design an interactive GUI using Tkinter. I also gained experience generating charts in Matplotlib and managing a project with proper version control.
+### User Interface
+
+A Tkinter GUI displays the data with scrollable tables. Users can:
+
+- **View All Tunes:** Shows all records in the database.  
+- **Search by Title:** Allows partial matches for the tune title.  
+- **Search by Book Number:** Filters tunes by numeric book number.  
+
+### Data Visualization
+
+Charts are created using Matplotlib and Pandas:
+
+- **Pie Chart:** Displays the top 15 tune types by frequency with percentages.  
+- **Bar Chart:** Shows the top 10 known origins of tunes. Empty or unknown origins are excluded, and each bar is colored differently.  
+
+### File Discovery
+
+The program scans the `abc_books` folder, identifying numbered subfolders and loading all `.abc` files.
+
+---
+
+## List of Files in the Project
+
+- `abc_books/` – Dataset of ABC files  
+- `assignment_code.py` – Main program file  
+- `assignment.md` – Assignment brief  
+- `images/` – Screenshots generated during execution  
+- `piechart.png` – Pie chart image  
+- `barchart.png` – Bar chart image  
+- `.gitignore` – Git ignore file  
+- `LICENSE` – License file  
+- `README.md` – Project documentation  
+
+---
+
+## References
+
+- GeeksforGeeks. Python Menu Widget in Tkinter. Retrieved from https://www.geeksforgeeks.org/python/python-menu-widget-in-tkinter/  
+- GeeksforGeeks. Plot a Pie Chart in Python using Matplotlib. Retrieved from https://www.geeksforgeeks.org/data-science/plot-a-pie-chart-in-python
