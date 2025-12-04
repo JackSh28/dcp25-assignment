@@ -279,8 +279,8 @@ def chart_origins():
     df = pd.DataFrame(rows, columns=["O"])
     freq = df["O"].value_counts().iloc[1:11]
     
-    colours = ["#00BBFF","#001AFF","#B700FF","#FF00EE","#F96AC0"
-               "#FF0000","#FE5D00","#FFFF00","#0CF200","#2C8503",]
+    colours = ["#F96AC0","#FE5D00","#FFFF00","#B700FF","#2C8503",
+                "#00BBFF","#001AFF","#0CF200","#FF00EE","#FF0000"]
 
     plt.figure(figsize=(10,6))
     freq.sort_values().plot(kind="barh", color=colours, edgecolor="black")
