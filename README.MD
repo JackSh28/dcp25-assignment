@@ -8,9 +8,9 @@ Student Number: C24775089
 
 # Screenshots
 
-![Tunes Menu Screenshot](images/tunes_menu.png)  
-![Pie Chart Screenshot](images/types_pie.png)  
-![Bar Chart Screenshot](images/origins_bar.png)  
+![Tunes Menu Screenshot](tunes_menu.png)  
+![Pie Chart Screenshot](types_pie.png)  
+![Bar Chart Screenshot](origins_bar.png)  
 
 # Description of the project
 
