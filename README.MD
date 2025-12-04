@@ -7,8 +7,7 @@ Name: Jack Shanahan
 Student Number: C24775089
 
 # Screenshots
-
-![Tunes Menu Screenshot](tunes_menu.png)  
+ 
 ![Pie Chart Screenshot](types_pie.png)  
 ![Bar Chart Screenshot](origins_bar.png)  
 
@@ -42,7 +41,7 @@ This project is a Python application that parses ABC music notation files, store
 
 | Files | Source |
 |-----------|-----------|
-| main.py | Self written |
+| assignment_code.py | Self written |
 | abc_books/ | Provided dataset |
 | images/ | Screenshots generated from running the application |
 
