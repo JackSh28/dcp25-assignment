@@ -108,7 +108,7 @@ def chart_origins():
         plt.show()
     finally:
         conn.close()
-
+```
 This code filters out unknown origins and assigns a distinct colour to each bar for clarity.
 
 ![Bar Chart Screenshot](images/origins_bar.png) 
