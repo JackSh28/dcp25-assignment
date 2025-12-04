@@ -278,10 +278,13 @@ def chart_origins():
 
     df = pd.DataFrame(rows, columns=["O"])
     freq = df["O"].value_counts().iloc[1:11]
+    
+    colours = ["#FF0000","#FE5D00","#FFFF00","#0CF200","#2C8503",
+                "#00BBFF","#001AFF","#B700FF","#FF00EE","#F96AC0"]
 
     plt.figure(figsize=(10,6))
-    freq.sort_values().plot(kind="barh", edgecolor="black")
-    plt.title("Top origins")
+    freq.sort_values().plot(kind="barh", color=colours, edgecolor="black")
+    plt.title("Top 10 Tune Origins")
     plt.xlabel("Count")
     plt.tight_layout()
     plt.savefig("origins_bar.png")
