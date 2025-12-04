@@ -16,8 +16,8 @@ def open_connection():
     return mysql.connector.connect(
         host="localhost",
         user="root",
-        password="",
-        database="tunes1"
+        password="Ladin?2567",
+        database="tunes"
     )
 
 # build table from scratch
