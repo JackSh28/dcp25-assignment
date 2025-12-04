@@ -2,9 +2,9 @@
 
 - [Assignment Brief](assignment.md)
 
-Name:
+Name: Jack Shanahan
 
-Student Number: 
+Student Number: C24775089
 
 # Screenshots
 
