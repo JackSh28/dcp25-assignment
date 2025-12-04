@@ -77,3 +77,51 @@ The program scans the `abc_books` folder, identifying numbered subfolders and lo
 
 - GeeksforGeeks. Python Menu Widget in Tkinter. Retrieved from https://www.geeksforgeeks.org/python/python-menu-widget-in-tkinter/  
 - GeeksforGeeks. Plot a Pie Chart in Python using Matplotlib. Retrieved from https://www.geeksforgeeks.org/data-science/plot-a-pie-chart-in-python
+- DataCamp. Python Pie Chart: Build and Style with Pandas and Matplotlib. Retrieved from https://www.datacamp.com/tutorial/python-pie-chart  
+- Stack Overflow. Tkinter — Create table using database fetched data. Retrieved from https://stackoverflow.com/questions/77556489/tkinter-create-table-using-database-fetched-data  
+- Duggan, B. Lecture notes for DATA2005: Data Centric Programming TU Dublin, School of Computer Science.  
+
+---
+
+## What I Am Most Proud of in the Assignment
+
+I am most proud of implementing the data visualization charts using Matplotlib. I combined data filtering with visual presentation to clearly highlight tune types and origins.  
+
+### Example:
+
+```python
+def chart_origins():
+    conn = open_connection()
+    try:
+        df = pd.read_sql("SELECT O FROM tunes1", conn)
+        freq = df["O"].value_counts().iloc[1:11]
+
+        colours = ["#FF0000","#FE5D00","#FFFF00","#0CF200","#2C8503",
+                   "#00BBFF","#001AFF","#B700FF","#FF00EE","#F96AC0"]
+
+        plt.figure(figsize=(10,6))
+        freq.sort_values().plot(kind='barh', color=colours, edgecolor='black')
+        plt.title("Top 10 Tune Origins")
+        plt.xlabel("Count")
+        plt.tight_layout()
+        plt.savefig("barchart.png")
+        plt.show()
+    finally:
+        conn.close()
+
+This code filters out unknown origins and assigns a distinct colour to each bar for clarity.
+
+![Bar Chart Screenshot](images/origins_bar.png) 
+
+What I Learned
+
+I learned how to connect Python to a MySQL database, process files, fix encoding issues, and create a functional GUI. I gained experience with data analysis using pandas and visualization using matplotlib. I also learned how to combine database operations, file handling, and user interfaces into a cohesive program.
+
+Use of AI
+
+I used AI to help format this README and improve grammar and clarity.
+
+Screenshots
+
+![Pie Chart Screenshot](images/types_pie.png)  
+![Bar Chart Screenshot](images/origins_bar.png) 
