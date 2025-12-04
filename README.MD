@@ -92,26 +92,28 @@ I am most proud of implementing the data visualization charts using Matplotlib. 
 ```python
 def chart_origins():
     conn = open_connection()
-    try:
-        df = pd.read_sql("SELECT O FROM tunes1", conn)
-        freq = df["O"].value_counts().iloc[1:11]
+    cur = conn.cursor()
+    cur.execute("SELECT O FROM tunes1")
+    rows = cur.fetchall()
+    conn.close()
 
-        colours = ["#FF0000","#FE5D00","#FFFF00","#0CF200","#2C8503",
-                   "#00BBFF","#001AFF","#B700FF","#FF00EE","#F96AC0"]
+    df = pd.DataFrame(rows, columns=["O"])
+    freq = df["O"].value_counts().iloc[1:11]
+    
+    colours = ["#FF0000","#FE5D00","#FFFF00","#0CF200","#2C8503",
+                "#00BBFF","#001AFF","#B700FF","#FF00EE","#F96AC0"]
 
-        plt.figure(figsize=(10,6))
-        freq.sort_values().plot(kind='barh', color=colours, edgecolor='black')
-        plt.title("Top 10 Tune Origins")
-        plt.xlabel("Count")
-        plt.tight_layout()
-        plt.savefig("barchart.png")
-        plt.show()
-    finally:
-        conn.close()
+    plt.figure(figsize=(10,6))
+    freq.sort_values().plot(kind="barh", color=colours, edgecolor="black")
+    plt.title("Top 10 Tune Origins")
+    plt.xlabel("Count")
+    plt.tight_layout()
+    plt.savefig("origins_bar.png")
+    plt.show()
 ```
 This code filters out unknown origins and assigns a distinct colour to each bar for clarity.
 
-![Bar Chart Screenshot](images/origins_bar.png) 
+![Bar Chart Screenshot](origins_bar.png) 
 
 What I Learned
 
@@ -123,5 +125,5 @@ I used AI to help format this README and improve grammar and clarity.
 
 Screenshots
 
-![Pie Chart Screenshot](images/types_pie.png)  
-![Bar Chart Screenshot](images/origins_bar.png) 
+![Pie Chart Screenshot](types_pie.png)  
+![Bar Chart Screenshot](origins_bar.png) 
