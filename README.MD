@@ -75,10 +75,10 @@ The program scans the `abc_books` folder, identifying numbered subfolders and lo
 
 ## References
 
-- GeeksforGeeks. Python Menu Widget in Tkinter. Retrieved from https://www.geeksforgeeks.org/python/python-menu-widget-in-tkinter/  
-- GeeksforGeeks. Plot a Pie Chart in Python using Matplotlib. Retrieved from https://www.geeksforgeeks.org/data-science/plot-a-pie-chart-in-python
-- DataCamp. Python Pie Chart: Build and Style with Pandas and Matplotlib. Retrieved from https://www.datacamp.com/tutorial/python-pie-chart  
-- Stack Overflow. Tkinter — Create table using database fetched data. Retrieved from https://stackoverflow.com/questions/77556489/tkinter-create-table-using-database-fetched-data  
+- GeeksforGeeks. Python Menu Widget in Tkinter. Retrieved from <https://www.geeksforgeeks.org/python/python-menu-widget-in-tkinter/>  
+- GeeksforGeeks. Plot a Pie Chart in Python using Matplotlib. Retrieved from <https://www.geeksforgeeks.org/data-science/plot-a-pie-chart-in-python>
+- DataCamp. Python Pie Chart: Build and Style with Pandas and Matplotlib. Retrieved from <https://www.datacamp.com/tutorial/python-pie-chart>  
+- Stack Overflow. Tkinter — Create table using database fetched data. Retrieved from <https://stackoverflow.com/questions/77556489/tkinter-create-table-using-database-fetched-data>  
 - Duggan, B. Lecture notes for DATA2005: Data Centric Programming TU Dublin, School of Computer Science.  
 
 ---
@@ -87,7 +87,7 @@ The program scans the `abc_books` folder, identifying numbered subfolders and lo
 
 I am most proud of implementing the data visualization charts using Matplotlib. I combined data filtering with visual presentation to clearly highlight tune types and origins.  
 
-### Example:
+### Example
 
 ```python
 def chart_origins():
@@ -111,9 +111,10 @@ def chart_origins():
     plt.savefig("origins_bar.png")
     plt.show()
 ```
+
 This code filters out unknown origins and assigns a distinct colour to each bar for clarity.
 
-![Bar Chart Screenshot](origins_bar.png) 
+![Bar Chart Screenshot](origins_bar.png)
 
 What I Learned
 
@@ -126,4 +127,4 @@ I used AI to help format this README and improve grammar and clarity.
 Screenshots
 
 ![Pie Chart Screenshot](types_pie.png)  
-![Bar Chart Screenshot](origins_bar.png) 
+![Bar Chart Screenshot](origins_bar.png)
