@@ -122,7 +122,7 @@ I learned how to connect Python to a MySQL database, process files, fix encoding
 
 Use of AI
 
-I used AI to help format this README and improve grammar and clarity.
+I used AI for help formatting this README to improve grammar and clarity.
 
 Screenshots
 
