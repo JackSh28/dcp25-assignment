@@ -65,7 +65,6 @@ The program scans the `abc_books` folder, identifying numbered subfolders and lo
 - `abc_books/` – Dataset of ABC files  
 - `assignment_code.py` – Main program file  
 - `assignment.md` – Assignment brief  
-- `images/` – Screenshots generated during execution  
 - `piechart.png` – Pie chart image  
 - `barchart.png` – Bar chart image  
 - `.gitignore` – Git ignore file  
